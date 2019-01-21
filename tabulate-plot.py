@@ -11,6 +11,7 @@ def helper( message ) :
         print("Functions allowed are:")
         print("1) y = x")
         print("2) y = exp(x)")
+        print("3) y = sqrt(|x|)")
         print()
         exit()
         pass
@@ -18,7 +19,7 @@ def helper( message ) :
 if ( len(sys.argv) != 2 ) :
     helper("Wrong number of arguments!")
 
-if ( int(sys.argv[1]) < 0 or int(sys.argv[1]) > 2 ) :
+if ( int(sys.argv[1]) < 0 or int(sys.argv[1]) > 3 ) :
     helper("Wrong arguments!")
 
 # selected function index:
@@ -37,8 +38,12 @@ def func1 ( xval ) :
 def func2 ( xval ) :
     return np.exp(xval)
 
+# first function: y = sqrt( |x| )
+def func3 ( xval ) :
+    return np.sqrt(np.fabs(xval))
+
 # fill-in the functions list (update when adding functions!)
-func_list = [func1, func2]
+func_list = [func1, func2, func3]
 
 # define function used:
 def func ( xval ) :
