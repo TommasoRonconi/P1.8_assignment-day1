@@ -20,8 +20,12 @@ def func1 ( xval ) :
 def func2 ( xval ) :
     return xval*xval
 
+# first function: y = x
+def func3 ( xval ) :
+    return xval*xval*xval
+
 # fill-in the functions list (update when adding functions!)
-func_list = [func1, func2]
+func_list = [func1, func2, func3]
 
 # define function used:
 def func ( xval ) :
