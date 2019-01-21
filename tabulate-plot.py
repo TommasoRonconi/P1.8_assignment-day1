@@ -32,15 +32,15 @@ Function definition:
 def func1 ( xval ) :
     return xval
 
-# first function: y = x
+# first function: y = sin(x)
 def func2 ( xval ) :
     return np.sin(xval)
 
-# first function: y = x
+# first function: y = cos(x)
 def func3 ( xval ) :
     return np.cos(xval)
 
-# first function: y = x
+# first function: y = tan(x)
 def func4 ( xval ) :
     return np.tan(xval)
 
