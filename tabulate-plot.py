@@ -10,6 +10,9 @@ def helper( message ) :
         print("This program runs as\n\n$ python", sys.argv[0], "which_function\n\nwhere 'which_function' is an integer selecting the function to run.\n")
         print("Functions allowed are:")
         print("1) y = x")
+        print("2) y = sin(x)")
+        print("3) y = cos(x)")
+        print("4) y = tan(x)")
         print()
         exit()
         pass
@@ -17,7 +20,7 @@ def helper( message ) :
 if ( len(sys.argv) != 2 ) :
     helper("Wrong number of arguments!")
 
-if ( int(sys.argv[1]) < 0 or int(sys.argv[1]) > 1 ) :
+if ( int(sys.argv[1]) < 0 or int(sys.argv[1]) > 4 ) :
     helper("Wrong arguments!")
 
 # selected function index:
