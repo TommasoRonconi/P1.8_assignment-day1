@@ -22,3 +22,13 @@ func_list = [func1]
 # define function used:
 def func ( xval ) :
     return func_list[which]( xval )
+
+"""
+Fill lists:
+"""
+import numpy as np
+
+xval = np.linspace(-5.0, 5.0, num=101, endpoint=True)
+print( "xval = ", xval )
+yval = func( xval )
+print( "yval = ", yval )
