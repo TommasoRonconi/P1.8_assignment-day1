@@ -53,7 +53,7 @@ def func ( xval ) :
 Fill lists:
 """
 
-xval = np.linspace(-5.0, 5.0, num=101, endpoint=True)
+xval = np.linspace(-3.0, 3.0, num=101, endpoint=True)
 print( "xval = ", xval )
 yval = func( xval )
 print( "yval = ", yval )
