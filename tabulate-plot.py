@@ -1,4 +1,5 @@
 import sys
+import numpy as np
 
 """
 Handle command line arguments
@@ -9,6 +10,7 @@ def helper( message ) :
         print("This program runs as\n\n$ python", sys.argv[0], "which_function\n\nwhere 'which_function' is an integer selecting the function to run.\n")
         print("Functions allowed are:")
         print("1) y = x")
+        print("2) y = exp(x)")
         print()
         exit()
         pass
@@ -16,7 +18,7 @@ def helper( message ) :
 if ( len(sys.argv) != 2 ) :
     helper("Wrong number of arguments!")
 
-if ( int(sys.argv[1]) < 0 or int(sys.argv[1]) > 1 ) :
+if ( int(sys.argv[1]) < 0 or int(sys.argv[1]) > 2 ) :
     helper("Wrong arguments!")
 
 # selected function index:
@@ -31,8 +33,12 @@ Function definition:
 def func1 ( xval ) :
     return xval
 
+# first function: y = exp(x)
+def func2 ( xval ) :
+    return np.exp(xval)
+
 # fill-in the functions list (update when adding functions!)
-func_list = [func1]
+func_list = [func1, func2]
 
 # define function used:
 def func ( xval ) :
@@ -41,7 +47,6 @@ def func ( xval ) :
 """
 Fill lists:
 """
-import numpy as np
 
 xval = np.linspace(-5.0, 5.0, num=101, endpoint=True)
 print( "xval = ", xval )
