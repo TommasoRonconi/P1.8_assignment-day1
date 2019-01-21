@@ -25,8 +25,12 @@ def func2 ( xval ) :
 def func3 ( xval ) :
     return np.cos(xval)
 
+# first function: y = x
+def func4 ( xval ) :
+    return np.tan(xval)
+
 # fill-in the functions list (update when adding functions!)
-func_list = [func1, func2, func3]
+func_list = [func1, func2, func3, func4]
 
 # define function used:
 def func ( xval ) :
