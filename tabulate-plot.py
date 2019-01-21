@@ -21,8 +21,12 @@ def func1 ( xval ) :
 def func2 ( xval ) :
     return np.sin(xval)
 
+# first function: y = x
+def func3 ( xval ) :
+    return np.cos(xval)
+
 # fill-in the functions list (update when adding functions!)
-func_list = [func1, func2]
+func_list = [func1, func2, func3]
 
 # define function used:
 def func ( xval ) :
