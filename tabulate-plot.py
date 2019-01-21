@@ -32,3 +32,15 @@ xval = np.linspace(-5.0, 5.0, num=101, endpoint=True)
 print( "xval = ", xval )
 yval = func( xval )
 print( "yval = ", yval )
+
+"""
+Plot lists:
+"""
+
+import matplotlib.pyplot as plt
+
+fig = plt.figure( figsize=( 12, 8 ) )
+ax = fig.add_subplot( 1, 1, 1 )
+
+ax.plot( xval, yval )
+plt.show()
