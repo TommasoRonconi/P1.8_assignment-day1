@@ -16,8 +16,12 @@ Function definition:
 def func1 ( xval ) :
     return xval
 
+# first function: y = x
+def func2 ( xval ) :
+    return xval*xval
+
 # fill-in the functions list (update when adding functions!)
-func_list = [func1]
+func_list = [func1, func2]
 
 # define function used:
 def func ( xval ) :
