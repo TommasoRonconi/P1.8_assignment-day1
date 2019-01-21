@@ -15,6 +15,8 @@ def helper( message ) :
         print("4) y = sin(x)")
         print("5) y = cos(x)")
         print("6) y = tan(x)")
+        print("7) y = exp(x)")
+        print("8) y = sqrt(|x|)")
         print()
         exit()
         pass
@@ -22,7 +24,7 @@ def helper( message ) :
 if ( len(sys.argv) != 2 ) :
     helper("Wrong number of arguments!")
 
-if ( int(sys.argv[1]) < 0 or int(sys.argv[1]) > 6 ) :
+if ( int(sys.argv[1]) < 0 or int(sys.argv[1]) > 8 ) :
     helper("Wrong arguments!")
 
 # selected function index:
@@ -57,8 +59,16 @@ def func5 ( xval ) :
 def func6 ( xval ) :
     return np.tan(xval)
 
+# first function: y = exp(x)
+def func7 ( xval ) :
+    return np.exp(xval)
+
+# first function: y = sqrt( |x| )
+def func8 ( xval ) :
+    return np.sqrt(np.fabs(xval))
+
 # fill-in the functions list (update when adding functions!)
-func_list = [func1, func2, func3, func4, func5, func6]
+func_list = [func1, func2, func3, func4, func5, func6, func7, func8]
 
 # define function used:
 def func ( xval ) :
@@ -69,9 +79,7 @@ Fill lists:
 """
 
 xval = np.linspace(-3.0, 3.0, num=101, endpoint=True)
-print( "xval = ", xval )
 yval = func( xval )
-print( "yval = ", yval )
 
 """
 Plot lists:
