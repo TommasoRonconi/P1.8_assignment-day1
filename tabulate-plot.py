@@ -5,6 +5,21 @@ import numpy as np
 Handle command line arguments
 """
 
+def helper( message ) :
+        print(message)
+        print("This program runs as\n\n$ python", sys.argv[0], "which_function\n\nwhere 'which_function' is an integer selecting the function to run.\n")
+        print("Functions allowed are:")
+        print("1) y = x")
+        print()
+        exit()
+        pass
+
+if ( len(sys.argv) != 2 ) :
+    helper("Wrong number of arguments!")
+
+if ( int(sys.argv[1]) < 0 or int(sys.argv[1]) > 1 ) :
+    helper("Wrong arguments!")
+
 # selected function index:
 which = int( sys.argv[1] )-1
 print("You selected function ", sys.argv[1])
